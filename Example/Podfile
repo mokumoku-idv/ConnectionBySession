@@ -1,0 +1,11 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'ConnectionBySession', :exclusive => true do
+  pod "ConnectionBySession", :path => "../"
+end
+
+target 'Tests', :exclusive => true do
+  pod "ConnectionBySession", :path => "../"
+
+  pod 'FBSnapshotTestCase'
+end
