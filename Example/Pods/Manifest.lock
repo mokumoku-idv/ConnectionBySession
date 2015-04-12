@@ -1,0 +1,17 @@
+PODS:
+  - ConnectionBySession (0.1.0)
+  - FBSnapshotTestCase (1.6)
+
+DEPENDENCIES:
+  - ConnectionBySession (from `../`)
+  - FBSnapshotTestCase
+
+EXTERNAL SOURCES:
+  ConnectionBySession:
+    :path: ../
+
+SPEC CHECKSUMS:
+  ConnectionBySession: c5d0663fa500549e06d525ec5532cf4711464efb
+  FBSnapshotTestCase: 9d5fe43b29ae3a0ed8fc829477971b281038f748
+
+COCOAPODS: 0.36.3

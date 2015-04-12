@@ -1,0 +1,25 @@
+{
+  "name": "ConnectionBySession",
+  "version": "0.1.0",
+  "summary": "A short description of ConnectionBySession.",
+  "description": "                       An optional longer description of ConnectionBySession\n\n                       * Markdown format.\n                       * Don't worry about the indent, we strip it!\n",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/ConnectionBySession",
+  "license": "MIT",
+  "authors": {
+    "hiratsukashu": "hiratsukashu@indival.co.jp"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/ConnectionBySession.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "ConnectionBySession": [
+      "Pod/Assets/*.png"
+    ]
+  }
+}
