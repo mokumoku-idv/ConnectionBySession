@@ -11,15 +11,7 @@ Pod::Spec.new do |s|
   s.name             = "ConnectionBySession"
   s.version          = "0.1.0"
   s.summary          = "ConnectionBySession is simple framework for networking.Developer can use easily for networking."
-  s.description      = <<-DESC
-                       An optional longer description of ConnectionBySession
-
-                       # What is it
-                       * It is simple framework for networking.
-                       * It is created by NSURLSession.
-                       * After networking,it can notify thing which is to finish connection.  						
-
-                       DESC
+  s.description      = 'It is simple framework for networking.It is created by NSURLSession-objective-C.After networking,it can notify thing which is to finish connection.'
   s.homepage         = "https://github.com/mokumoku-idv/ConnectionBySession"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
