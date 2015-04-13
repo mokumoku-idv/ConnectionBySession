@@ -12,16 +12,14 @@
 @interface ConnectionBySession : NSObject<NSURLSessionDataDelegate>
 {
     NSString *urlStr;
-    NSMutableData *data;
-    NSError *error;
-    int status;
+    NSMutableData *connectedData;
+    NSInteger status;
     NSURLSession *session;
 }
 @property(assign,nonatomic) id<ConnectionBySessionResult> delegate;
 @property(strong,nonatomic) NSString *urlStr;
-@property(strong,nonatomic) NSMutableData *data;
-@property(strong,nonatomic) NSError *error;
-@property(assign,nonatomic) int status;
+@property(strong,nonatomic) NSMutableData *connectedData;
+@property(assign,nonatomic) NSInteger status;
 @property(strong,nonatomic) NSURLSession *session;
 
 
