@@ -11,7 +11,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  ConnectionBySession: c5d0663fa500549e06d525ec5532cf4711464efb
+  ConnectionBySession: be2b2816d7bab4967f133d87cc728cc25e25d60e
   FBSnapshotTestCase: 9d5fe43b29ae3a0ed8fc829477971b281038f748
 
 COCOAPODS: 0.36.3

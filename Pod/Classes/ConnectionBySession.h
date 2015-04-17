@@ -11,18 +11,18 @@
 
 @interface ConnectionBySession : NSObject<NSURLSessionDataDelegate>
 {
-    NSString *urlStr;
+    __weak NSString *urlStr;
     NSMutableData *connectedData;
     NSInteger status;
     NSURLSession *session;
 }
 @property(assign,nonatomic) id<ConnectionBySessionResult> delegate;
-@property(strong,nonatomic) NSString *urlStr;
+@property(weak,nonatomic) NSString *urlStr;
 @property(strong,nonatomic) NSMutableData *connectedData;
 @property(assign,nonatomic) NSInteger status;
 @property(strong,nonatomic) NSURLSession *session;
 
-
+-(id)initWithUrl:(NSString *)urlArgStr;
 -(void)doConncet;
 -(void)cancelConnect;
 -(void)cancelTasksByUrl:(NSArray *)tasks;
