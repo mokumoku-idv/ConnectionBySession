@@ -20,6 +20,9 @@ it, simply add the following line to your Podfile:
 pod "ConnectionBySession"
 ```
 
+## How to use by swift
+* In swift,You can use it by the following code.
+
 ## Author
 
 hiratsukashu, hiratsukashu@indival.co.jp
