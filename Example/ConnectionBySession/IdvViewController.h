@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ConnectionBySessionResult.h"
 
-@interface IdvViewController : UIViewController
+@interface IdvViewController : UIViewController<ConnectionBySessionResult>
 
 @end

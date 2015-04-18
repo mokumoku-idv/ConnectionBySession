@@ -14,22 +14,32 @@
 
 @synthesize delegate;
 @synthesize urlStr;
-@synthesize data;
-@synthesize error;
+@synthesize connectedData;
 @synthesize status;
 @synthesize session;
+
+-(id)initWithUrl:(NSString *)urlArgStr{
+    if (self = [super init]) {
+        // 初期処理
+        self.urlStr = urlArgStr;
+        self.connectedData = [[NSMutableData alloc] init];
+    }
+    return self;
+}
 
 -(void)doConncet{
     
     NSURL* url = [NSURL URLWithString:self.urlStr];
     NSURLSessionConfiguration* config = [NSURLSessionConfiguration defaultSessionConfiguration];
     config.timeoutIntervalForRequest = 15;
-    self.session = [NSURLSession sessionWithConfiguration:config];
+    self.session = [NSURLSession sessionWithConfiguration:config
+                                                 delegate:self
+                                            delegateQueue:[NSOperationQueue mainQueue]];
+    
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     
-    NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        // The server answers with an error because it doesn't receive the params
-    }];
+    NSURLSessionDataTask *task = [self.session dataTaskWithRequest:request];
+    
     [task resume];
     
 }
@@ -53,11 +63,11 @@
     
     if ([response isKindOfClass:[NSHTTPURLResponse class]]) {
         
-        NSHTTPURLResponse *httpURLResponse = [[NSHTTPURLResponse class] response];
+        NSHTTPURLResponse *httpURLResponse = (NSHTTPURLResponse *)response;
         
-        int status = httpURLResponse.statusCode;
+        self.status = httpURLResponse.statusCode;
         
-        if(status == 200){
+        if(self.status == 200){
             NSURLSessionResponseDisposition disposition = NSURLSessionResponseAllow;
             
             completionHandler(disposition);
@@ -75,9 +85,9 @@
 }
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data{
     
-    [self.data appendData:data];
+    [self.connectedData appendData:data];
     [self.delegate showResult];
-        
+    
 }
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error{
     
@@ -87,7 +97,7 @@
         [self.delegate handleErrorForConnection];
         
     }
-        
+    
 }
 - (void)URLSession:(NSURLSession *)session didBecomeInvalidWithError:(NSError *)error{
     NSLog(@"%@",error);

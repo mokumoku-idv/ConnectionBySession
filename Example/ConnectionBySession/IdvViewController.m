@@ -7,18 +7,40 @@
 //
 
 #import "IdvViewController.h"
+#import "ConnectionBySession.h"
 
 @interface IdvViewController ()
 
+@property (strong, nonatomic) ConnectionBySession *connection;
+
+
+
 @end
 
+
 @implementation IdvViewController
+@synthesize connection;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSLog(@"tsettesttes");
 	// Do any additional setup after loading the view, typically from a nib.
+    connection = [[ConnectionBySession alloc] initWithUrl:@"http://api.openweathermap.org/data/2.5/weather?q=Tokyo,jp"];
+    connection.delegate = self;
+    [connection doConncet];
+    
 }
+
+- (void)showResult{
+    NSLog(@"success");
+    NSLog(@"%@",connection.connectedData);
+}
+- (void)handleErrorForConnection{
+    NSLog(@"error occuerd");
+}
+
+
 
 - (void)didReceiveMemoryWarning
 {
