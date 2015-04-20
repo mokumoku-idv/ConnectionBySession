@@ -21,7 +21,8 @@ pod "ConnectionBySession"
 ```
 
 ## How to use by swift
-* In swift,You can use it by the following code.
+* In swift,You can use it by the following page.
+* https://github.com/shiratsu/ConnectionSampleBySwift
 
 ## Author
 
