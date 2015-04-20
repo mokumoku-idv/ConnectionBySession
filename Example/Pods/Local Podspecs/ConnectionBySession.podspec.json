@@ -1,6 +1,6 @@
 {
   "name": "ConnectionBySession",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "ConnectionBySession is simple framework for networking.Developer can use easily for networking.",
   "description": "It is simple framework for networking.It is created by NSURLSession-objective-C.After networking,it can notify thing which is to finish connection.",
   "homepage": "https://github.com/mokumoku-idv/ConnectionBySession",
@@ -10,7 +10,7 @@
   },
   "source": {
     "git": "https://github.com/mokumoku-idv/ConnectionBySession.git",
-    "tag": "0.1.0"
+    "tag": "0.1.1"
   },
   "social_media_url": "https://twitter.com/shunsuke_h2006",
   "platforms": {
