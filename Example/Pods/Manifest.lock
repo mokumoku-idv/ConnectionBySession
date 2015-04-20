@@ -1,6 +1,6 @@
 PODS:
-  - ConnectionBySession (0.1.0)
-  - FBSnapshotTestCase (1.6)
+  - ConnectionBySession (0.1.1)
+  - FBSnapshotTestCase (1.7)
 
 DEPENDENCIES:
   - ConnectionBySession (from `../`)
@@ -11,7 +11,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  ConnectionBySession: be2b2816d7bab4967f133d87cc728cc25e25d60e
-  FBSnapshotTestCase: 9d5fe43b29ae3a0ed8fc829477971b281038f748
+  ConnectionBySession: b87644013725fbccc2afa0336f68efc17747556a
+  FBSnapshotTestCase: 1eea5145c1f2fa907812ab92e1d6063a8d809b4e
 
 COCOAPODS: 0.36.3

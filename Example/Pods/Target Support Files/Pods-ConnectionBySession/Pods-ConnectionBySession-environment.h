@@ -10,5 +10,5 @@
 #define COCOAPODS_POD_AVAILABLE_ConnectionBySession
 #define COCOAPODS_VERSION_MAJOR_ConnectionBySession 0
 #define COCOAPODS_VERSION_MINOR_ConnectionBySession 1
-#define COCOAPODS_VERSION_PATCH_ConnectionBySession 0
+#define COCOAPODS_VERSION_PATCH_ConnectionBySession 1
 

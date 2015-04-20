@@ -26,9 +26,9 @@
     [super viewDidLoad];
     NSLog(@"tsettesttes");
 	// Do any additional setup after loading the view, typically from a nib.
-    connection = [[ConnectionBySession alloc] initWithUrl:@"http://api.openweathermap.org/data/2.5/weather?q=Tokyo,jp"];
+    connection = [[ConnectionBySession alloc] init];
     connection.delegate = self;
-    [connection doConncet];
+    [connection doConncet:@"http://api.openweathermap.org/data/2.5/weather?q=Tokyo,jp"];
     
 }
 
