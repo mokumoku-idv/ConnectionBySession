@@ -29,7 +29,7 @@
 
 -(void)doConncet{
     
-    NSURL* url = [NSURL URLWithString:self.urlStr];
+    NSURL* url = [NSURL URLWithString:[self.urlStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     NSURLSessionConfiguration* config = [NSURLSessionConfiguration defaultSessionConfiguration];
     config.timeoutIntervalForRequest = 15;
     self.session = [NSURLSession sessionWithConfiguration:config
